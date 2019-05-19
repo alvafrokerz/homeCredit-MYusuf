@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "3aaf9c45-cb70-4d8d-b352-8fb2f072b061",
+		"name": "homeCredit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get member of module",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userName",
+							"value": "UserB",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "UserID",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/order/getByUserId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"order",
+						"getByUserId"
+					]
+				},
+				"description": "tes hasil\ntolong sesuaikan port dan url "
+			},
+			"response": []
+		},
+		{
+			"name": "menambahkan user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\t\"userName\":\"UserC\" \n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/user/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "menambahkan module",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"moduleName\":\"tes\" \n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/module/add?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"module",
+						"add"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "yosuacr",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userName",
+							"value": "UserAss",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/user/getByName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"user",
+						"getByName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get module by module name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "moduleName",
+							"value": "a",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/module/getByName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"module",
+						"getByName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "menambahkan order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"moduleName\":\"HistoryCard\",\n\t\"userName\":\"UserC\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/order/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"order",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
